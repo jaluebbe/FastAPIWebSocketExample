@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Visualisation with three.js</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="bird.css">
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="info">
+        based on <a href="https://threejs.org/examples/#webgl_lights_hemisphere" target="_blank" rel="noopener">three.js</a> example
+    </div>
+    <script type="module">
+        import {
+            initBird
+        } from "./bird.js";
+        initBird('models/Stork.glb', 0.57);
+        var intervalId = undefined;
+        window.stopRotation = function() {
+            clearInterval(intervalId);
+        };
+        window.startRotation = function() {
+            stopRotation();
+            intervalId = setInterval(function() {
+                if (typeof bird !== "undefined") {
+                    bird.yaw(180 * Math.cos(Date.now() / 20000));
+                    bird.roll(60 * Math.cos(Date.now() / 2000));
+                    bird.pitch(45 * Math.cos(Date.now() / 10000));
+                }
+            }, 40);
+        };
+        startRotation();
+        console.log("Call 'startRotation()' or 'stopRotation()'.");
+    </script>
+</body>
+
+</html>
