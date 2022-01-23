@@ -1,4 +1,5 @@
 module.exports = {
+    mode: 'production',
     experiments: {
         outputModule: true,
     },
@@ -7,6 +8,9 @@ module.exports = {
         library: {
             type: 'module'
         }
-//        libraryTarget: 'commonjs-module'
+    },
+    performance: {  
+        maxEntrypointSize: 1024000,  
+        maxAssetSize: 1024000      
     }
 }
