@@ -18,7 +18,8 @@
         import {
             initBird
         } from "./dist/bird.js";
-        initBird('dist/models/Stork.glb', 0.57);
+        // parameters: GLTF model, animation period, scaling factor
+        initBird('dist/models/Stork.glb', 0.57, 0.35);
         var intervalId = undefined;
         window.stopRotation = function() {
             clearInterval(intervalId);

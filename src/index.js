@@ -24,8 +24,8 @@ const mixers = [];
 let stats;
 const clock = new Clock();
 
-function initBird(model, period) {
-    init(model, period)
+function initBird(model, period, scale=0.35) {
+    init(model, period, scale)
     animate();
 };
 window.initBird = initBird;
@@ -41,7 +41,7 @@ function radians_to_degrees(radians) {
     return radians * (180 / pi);
 }
 
-function init(model, period) {
+function init(model, period, scale) {
     const container = document.getElementById('container');
     container.innerHTML = "";
     camera = new PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 5000);
@@ -135,8 +135,7 @@ function init(model, period) {
     const loader = new GLTFLoader();
     loader.load(model, function(gltf) {
         const mesh = gltf.scene.children[0];
-        const s = 0.35;
-        mesh.scale.set(s, s, s);
+        mesh.scale.set(scale, scale, scale);
         mesh.position.y = 15;
         mesh.rotation.y = -1;
         mesh.castShadow = true;
