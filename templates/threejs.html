@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Visualisation with three.js</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="static/favicon.png">
+    <link type="text/css" rel="stylesheet" href="static/bird.css">
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="info">
+        based on <a href="https://threejs.org/examples/#webgl_lights_hemisphere" target="_blank" rel="noopener">three.js</a> example
+    </div>
+    <script type="module">
+        import {
+            initBird
+        } from "./static/bird.js";
+        // parameters: GLTF model, animation period, scaling factor
+        initBird('static/models/Stork.glb', 0.57, 0.35);
+
+        var ws = new WebSocket("ws://{{my_host}}:{{my_port}}/ws/imu");
+        ws.onmessage = function(event) {
+            let message = JSON.parse(event.data);
+            if (typeof bird !== "undefined") {
+                bird.yaw(message.yaw);
+                bird.roll(message.roll);
+                bird.pitch(message.pitch);
+            }
+        }
+    </script>
+</body>
+
+</html>
