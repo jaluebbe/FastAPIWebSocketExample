@@ -1,0 +1,12 @@
+name: websocket_examples
+dependencies:
+  - nodejs
+  - numpy
+  - redis-py
+  - pip
+  - pip:
+    - aioredis==2
+    - fastapi
+    - jinja2
+    - uvicorn
+    - websockets
