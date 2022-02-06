@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Visualisation with plotly.js</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        #graph {
+            min-height: 400px;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="graph"></div>
+    <script src="static/plotly-basic-2.9.0.min.js"></script>
+    <script>
+        var data = [{
+            x: [],
+            y: [],
+            type: 'scatter',
+            hovertemplate: '<b>%{y:.1f} deg</b><extra></extra>'
+        }, {
+            x: [],
+            y: [],
+            type: 'scatter',
+            yaxis: 'y2',
+            hovertemplate: '<b>%{y:.1f} deg</b><extra></extra>'
+        }, {
+            x: [],
+            y: [],
+            type: 'scatter',
+            yaxis: 'y3',
+            hovertemplate: '<b>%{y:.1f} deg</b><extra></extra>'
+        }];
+        var layout = {
+            showlegend: false,
+            hovermode: 'x',
+            title: 'Visualisation with plotly.js',
+            font: {
+                size: 16,
+            },
+            grid: {
+                rows: 3,
+                columns: 1,
+                subplots: [
+                    ['xy'],
+                    ['xy2'],
+                    ['xy3']
+                ]
+            },
+            xaxis: {
+                automargin: true,
+                fixedrange: true,
+                tickangle: 0,
+                type: 'date',
+                title: {
+                    text: 'Date',
+                }
+            },
+            yaxis: {
+                automargin: true,
+                title: {
+                    text: 'roll [°]',
+                },
+            },
+            yaxis2: {
+                automargin: true,
+                title: {
+                    text: 'pitch [°]',
+                },
+            },
+            yaxis3: {
+                automargin: true,
+                title: {
+                    text: 'yaw [°]',
+                }
+            }
+        };
+        var config = {
+            responsive: true
+        };
+        Plotly.newPlot('graph', data, layout, config);
+
+        setInterval(function() {
+            var time = new Date().valueOf();
+            var update = {
+                x: [
+                    [time],
+                    [time],
+                    [time]
+                ],
+                y: [
+                    [60 * Math.cos(Date.now() / 2000)],
+                    [45 * Math.cos(Date.now() / 10000)],
+                    [180 * Math.cos(Date.now() / 20000)]
+                ]
+            };
+            Plotly.extendTraces('graph', update, [0, 1, 2], 2000);
+        }, 40);
+    </script>
+</body>
+
+</html>
