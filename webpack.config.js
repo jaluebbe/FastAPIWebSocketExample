@@ -5,7 +5,7 @@ module.exports = {
     },
     output: {
         filename: 'bird.js',
-        path: __dirname + '/static',
+        path: __dirname + '/backend/static',
         library: {
             type: 'module'
         }

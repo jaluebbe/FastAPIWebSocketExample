@@ -8,7 +8,7 @@ implementation.
 
 Visualisation examples with JS generated fake data can be found at https://jaluebbe.github.io/FastAPIWebSocketExample/ .
 
-## Building bird.js
+## Building bird.js (optional)
 The content of src/index.js is packed to dist/bird.js which will include all requirements from the three.js library.
 To build bird.js, you need npm (nodejs) installed. Then call
 ```
@@ -16,7 +16,11 @@ npx webpack
 ```
 and install webpack on request.
 
-## Running the web interface
+
+## Using docker compose to start all processes
 ```
-uvicorn backend:app --host 0.0.0.0 --port 8080
+docker compose up
 ```
+If you don't want to use docker, you may use the Dockerfiles as guide how to
+start the fake data generator and the backend. Additionally, a running instance
+of Redis is required.

@@ -5,8 +5,8 @@
     <title>Visualisation with three.js</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="dist/favicon.png">
-    <link type="text/css" rel="stylesheet" href="dist/bird.css">
+    <link rel="shortcut icon" type="image/png" href="backend/static/favicon.png">
+    <link type="text/css" rel="stylesheet" href="backend/static/bird.css">
 </head>
 
 <body>
@@ -17,9 +17,9 @@
     <script type="module">
         import {
             initBird
-        } from "./static/bird.js";
+        } from "./backend/static/bird.js";
         // parameters: GLTF model, animation period, scaling factor
-        initBird('static/models/Stork.glb', 0.57, 0.35);
+        initBird('backend/static/models/Stork.glb', 0.57, 0.35);
         var intervalId = undefined;
         window.stopRotation = function() {
             clearInterval(intervalId);
