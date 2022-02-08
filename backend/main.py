@@ -51,10 +51,10 @@ async def threejs(request: Request):
     )
 
 
-@app.get("/plotly.html", response_class=HTMLResponse)
-async def plotly(request: Request):
+@app.get("/websocket_consumer.js", response_class=HTMLResponse)
+async def websocket_consumer(request: Request):
     return templates.TemplateResponse(
-        "plotly.html",
+        "websocket_consumer.js",
         {
             "request": request,
             "my_host": request.url.hostname,

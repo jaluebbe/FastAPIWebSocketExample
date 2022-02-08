@@ -20,7 +20,8 @@
 
 <body>
     <div id="graph"></div>
-    <script src="static/plotly-basic-2.9.0.min.js"></script>
+    <script src="plotly-basic-2.9.0.min.js"></script>
+    <script src="../websocket_consumer.js"></script>
     <script>
         var data = [{
             x: [],
@@ -89,9 +90,7 @@
         };
         Plotly.newPlot('graph', data, layout, config);
 
-        var ws = new WebSocket("ws://{{my_host}}:{{my_port}}/ws/imu");
-        ws.onmessage = function(event) {
-            let message = JSON.parse(event.data);
+        function processMessage(message) {
             var time = message.i_utc * 1000;
             var update = {
                 x: [
