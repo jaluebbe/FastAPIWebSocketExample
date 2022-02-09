@@ -36,5 +36,8 @@ if __name__ == "__main__":
     sensor = FakeImu()
     while True:
         sensor_data = sensor.get_sensor_data()
-        redis_connection.publish("imu", json.dumps(sensor_data))
+        sensor_data["channel"] = "imu"
+        redis_connection.publish(
+            sensor_data["channel"], json.dumps(sensor_data)
+        )
         time.sleep(0.04)
