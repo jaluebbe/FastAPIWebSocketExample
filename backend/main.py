@@ -1,7 +1,6 @@
-from fastapi import FastAPI, HTTPException, WebSocket, status, Request
+from fastapi import FastAPI, HTTPException, WebSocket, status
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, HTMLResponse
-from fastapi.templating import Jinja2Templates
+from fastapi.responses import FileResponse
 import aioredis
 import websockets
 import json
@@ -17,8 +16,6 @@ redis_connection = aioredis.Redis(host=redis_host, decode_responses=True)
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
-
-templates = Jinja2Templates(directory="templates")
 
 
 async def _get_channel_data(channels):
@@ -39,30 +36,6 @@ async def root():
     return FileResponse("index.html")
 
 
-@app.get("/threejs.html", response_class=HTMLResponse)
-async def threejs(request: Request):
-    return templates.TemplateResponse(
-        "threejs.html",
-        {
-            "request": request,
-            "my_host": request.url.hostname,
-            "my_port": request.url.port,
-        },
-    )
-
-
-@app.get("/websocket_consumer.js", response_class=HTMLResponse)
-async def websocket_consumer(request: Request):
-    return templates.TemplateResponse(
-        "websocket_consumer.js",
-        {
-            "request": request,
-            "my_host": request.url.hostname,
-            "my_port": request.url.port,
-        },
-    )
-
-
 @app.get("/api/current_orientation")
 async def get_current_orientation():
     channels = ["imu"]
@@ -72,6 +45,17 @@ async def get_current_orientation():
         logging.exception("/api/current_orientation")
         raise HTTPException(status_code=404, detail="no data available")
     return imu_data
+
+
+@app.get("/api/current_pressure")
+async def get_current_pressure():
+    channels = ["barometer"]
+    try:
+        baro_data = await asyncio.wait_for(_get_channel_data(channels), 0.2)
+    except asyncio.TimeoutError:
+        logging.exception("/api/current_pressure")
+        raise HTTPException(status_code=404, detail="no data available")
+    return baro_data
 
 
 @app.websocket("/ws/{channel}")

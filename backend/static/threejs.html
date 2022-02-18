@@ -21,7 +21,7 @@
         // parameters: GLTF model, animation period, scaling factor
         initBird('static/models/Stork.glb', 0.57, 0.35);
 
-        var ws = new WebSocket("ws://{{my_host}}:{{my_port}}/ws/imu");
+        var ws = new WebSocket("ws://" + window.location.host + "/ws/imu");
         ws.onmessage = function(event) {
             let message = JSON.parse(event.data);
             if (typeof bird !== "undefined") {

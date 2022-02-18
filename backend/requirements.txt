@@ -1,5 +1,4 @@
 fastapi
 aioredis==2
 websockets
-jinja2
 uvicorn
