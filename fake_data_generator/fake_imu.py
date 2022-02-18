@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 import time
-import os
-import json
 import socket
-import redis
 import numpy as np
 
 
@@ -24,20 +21,3 @@ class FakeImu:
             "yaw": round(yaw, 1),
         }
         return sensor_data
-
-
-if __name__ == "__main__":
-
-    if "REDIS_HOST" in os.environ:
-        redis_host = os.environ["REDIS_HOST"]
-    else:
-        redis_host = "127.0.0.1"
-    redis_connection = redis.Redis(host=redis_host)
-    sensor = FakeImu()
-    while True:
-        sensor_data = sensor.get_sensor_data()
-        sensor_data["channel"] = "imu"
-        redis_connection.publish(
-            sensor_data["channel"], json.dumps(sensor_data)
-        )
-        time.sleep(0.04)

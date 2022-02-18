@@ -60,7 +60,7 @@ async def get_current_pressure():
 
 @app.websocket("/ws/{channel}")
 async def websocket_endpoint(websocket: WebSocket, channel: str):
-    supported_channels = ["imu"]
+    supported_channels = ["imu", "barometer"]
     await websocket.accept()
     if channel not in supported_channels:
         await websocket.close(code=status.WS_1003_UNSUPPORTED_DATA)
