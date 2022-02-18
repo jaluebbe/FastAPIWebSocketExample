@@ -5,8 +5,8 @@
     <title>Visualisation with three.js</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="static/favicon.png">
-    <link type="text/css" rel="stylesheet" href="static/bird.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link type="text/css" rel="stylesheet" href="bird.css">
 </head>
 
 <body>
@@ -17,9 +17,9 @@
     <script type="module">
         import {
             initBird
-        } from "./static/bird.js";
+        } from "./bird.js";
         // parameters: GLTF model, animation period, scaling factor
-        initBird('static/models/Stork.glb', 0.57, 0.35);
+        initBird('models/Stork.glb', 0.57, 0.35);
 
         var ws = new WebSocket("ws://" + window.location.host + "/ws/imu");
         ws.onmessage = function(event) {
