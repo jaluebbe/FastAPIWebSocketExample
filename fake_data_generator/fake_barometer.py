@@ -12,7 +12,7 @@ class FakeBarometer:
         timestamp = time.time()
         pressure = (
             101325
-            + 2e2 * np.cos(timestamp / 5)
+            + 2e2 * np.cos(timestamp / 10)
             + 2e3 * np.cos(timestamp / 1e4)
         )
         temperature = 15 + 10 * np.cos(timestamp / 2e3)
