@@ -7,15 +7,17 @@
 </head>
 
 <body>
-    <div>
-        <span id="attitude"></span>
-        <span id="heading"></span>
+    <div class="instruments">
+        <div>
+            <span id="attitude"></span>
+            <span id="heading"></span>
+        </div>
+        <div>
+            <span id="altimeter"></span>
+            <span id="variometer"></span>
+        </div>
     </div>
-    <div>
-        <span id="altimeter"></span>
-        <span id="variometer"></span>
-    </div>
-    <script src="js/jquery-3.6.0.min"></script>
+    <script src="../jquery-3.6.0.min.js"></script>
     <script src="js/jquery.flightindicators.min.js"></script>
     <script type="text/javascript">
         function calculate_altitude(pressure, p0 = 101325) {
