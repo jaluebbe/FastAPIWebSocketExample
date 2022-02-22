@@ -1,106 +1,1278 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="400.667px" height="400.666px" viewBox="0 0 400.667 400.666" enable-background="new 0 0 400.667 400.666"
-	 xml:space="preserve">
-<circle fill="#232323" cx="200.333" cy="200" r="161"/>
-<g>
-	<text transform="matrix(1 0 0 1 289.6499 203.833)" fill="#FFFFFF" font-family="sans-serif" font-size="11">990</text>
-	<text transform="matrix(0.9848 0.1736 -0.1736 0.9848 287.627 219.2837)" fill="#FFFFFF" font-family="sans-serif" font-size="11">985</text>
-	<text transform="matrix(0.9397 0.342 -0.342 0.9397 282.9517 234.1489)" fill="#FFFFFF" font-family="sans-serif" font-size="11">980</text>
-	<text transform="matrix(0.9848 -0.1736 0.1736 0.9848 288.959 188.2651)" fill="#FFFFFF" font-family="sans-serif" font-size="11">995</text>
-	<text transform="matrix(0.9397 -0.342 0.342 0.9397 280.3481 174.9556)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1000</text>
-	<text transform="matrix(0.866 -0.5 0.5 0.866 274.7842 161.4429)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1005</text>
-	<text transform="matrix(0.766 -0.6428 0.6428 0.766 266.9575 149.1006)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1010</text>
-	<text transform="matrix(0.6428 -0.766 0.766 0.6428 257.1064 138.3047)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1015</text>
-	<text transform="matrix(0.5 -0.866 0.866 0.5 245.5322 129.3848)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1020</text>
-	<text transform="matrix(0.342 -0.9397 0.9397 0.342 232.583 122.6084)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1025</text>
-	<text transform="matrix(0.1736 -0.9848 0.9848 0.1736 218.6543 118.1841)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1030</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0beta2 (2b71d25, 2019-12-03)"
+   sodipodi:docname="altitude_pressure.svg"
+   xml:space="preserve"
+   enable-background="new 0 0 400.667 400.666"
+   viewBox="0 0 400.667 400.666"
+   height="400.666px"
+   width="400.667px"
+   y="0px"
+   x="0px"
+   id="Layer_2"
+   version="1.1"><metadata
+   id="metadata1016"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+   id="defs1014"><rect
+   id="rect3694"
+   height="62.778146"
+   width="114.32534"
+   y="97.04695"
+   x="59.034495" />
 	
-		<text transform="matrix(2.980232e-008 -1 1 2.980232e-008 204.168 116.2451)" fill="#FFFFFF" font-family="sans-serif" font-size="11">1035</text>
-	<g>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
-			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="313.562" y1="200.333" x2="324.167" y2="200.333"/>
-	</g>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="315.803" y1="196.3" x2="321.803" y2="196.091"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="315.604" y1="192.273" x2="321.592" y2="191.854"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="315.264" y1="188.255" x2="321.234" y2="187.628"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="314.784" y1="184.251" x2="320.729" y2="183.417"/>
-	<g>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 		
-			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="311.784" y1="219.989" x2="322.227" y2="221.83"/>
-	</g>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="314.691" y1="216.407" x2="320.636" y2="217.243"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="315.194" y1="212.406" x2="321.165" y2="213.034"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="315.557" y1="208.391" x2="321.545" y2="208.81"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="315.78" y1="204.364" x2="321.78" y2="204.574"/>
-	<g>
+	
 		
-			<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="306.619" y1="239.038" x2="316.584" y2="242.665"/>
-	</g>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="310.104" y1="236.016" x2="315.814" y2="237.871"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="311.293" y1="232.162" x2="317.065" y2="233.818"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="312.349" y1="228.271" x2="318.173" y2="229.724"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="313.268" y1="224.345" x2="319.14" y2="225.594"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="302.182" y1="254.529" x2="307.483" y2="257.349"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="304.022" y1="250.941" x2="309.418" y2="253.574"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="305.737" y1="247.293" x2="311.221" y2="249.734"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="307.325" y1="243.586" x2="312.89" y2="245.835"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="314.165" y1="180.267" x2="320.078" y2="179.225"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="313.407" y1="176.307" x2="319.28" y2="175.059"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="312.51" y1="172.375" x2="318.337" y2="170.923"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="311.478" y1="168.478" x2="317.25" y2="166.823"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="310.311" y1="164.619" x2="316.022" y2="162.764"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="309.009" y1="160.802" x2="314.652" y2="158.75"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="307.575" y1="157.034" x2="313.143" y2="154.786"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="306.01" y1="153.317" x2="311.497" y2="150.876"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="304.317" y1="149.658" x2="309.715" y2="147.027"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="302.497" y1="146.06" x2="307.8" y2="143.242"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="300.552" y1="142.528" x2="305.754" y2="139.526"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="298.486" y1="139.065" x2="303.58" y2="135.885"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="296.299" y1="135.677" x2="301.279" y2="132.321"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="293.996" y1="132.368" x2="298.855" y2="128.839"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="291.579" y1="129.141" x2="296.312" y2="125.445"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="289.05" y1="126" x2="293.652" y2="122.141"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="286.414" y1="122.949" x2="290.878" y2="118.932"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="283.672" y1="119.992" x2="287.994" y2="115.821"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="280.83" y1="117.133" x2="285.002" y2="112.813"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="277.889" y1="114.375" x2="281.908" y2="109.912"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="274.854" y1="111.72" x2="278.714" y2="107.121"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="271.728" y1="109.173" x2="275.425" y2="104.442"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="268.515" y1="106.737" x2="272.044" y2="101.88"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="265.219" y1="104.415" x2="268.577" y2="99.438"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="261.844" y1="102.209" x2="265.026" y2="97.118"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="258.394" y1="100.123" x2="261.396" y2="94.923"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="254.873" y1="98.158" x2="257.692" y2="92.856"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="251.286" y1="96.316" x2="253.917" y2="90.92"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="247.636" y1="94.602" x2="250.078" y2="89.117"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="243.929" y1="93.016" x2="246.178" y2="87.449"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="240.169" y1="91.56" x2="242.222" y2="85.918"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="236.361" y1="90.236" x2="238.215" y2="84.526"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="232.508" y1="89.045" x2="234.163" y2="83.275"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="228.617" y1="87.991" x2="230.069" y2="82.166"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="224.691" y1="87.072" x2="225.939" y2="81.2"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="220.735" y1="86.291" x2="221.778" y2="80.379"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="216.754" y1="85.648" x2="217.59" y2="79.704"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="212.753" y1="85.146" x2="213.381" y2="79.175"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="208.738" y1="84.783" x2="209.157" y2="78.794"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="204.711" y1="84.56" x2="204.921" y2="78.561"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="196.648" y1="84.534" x2="196.439" y2="78.535"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="192.621" y1="84.734" x2="192.203" y2="78.746"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="188.603" y1="85.074" x2="187.976" y2="79.103"/>
-	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="184.599" y1="85.554" x2="183.764" y2="79.609"/>
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="311.9" y1="180.666" x2="322.343" y2="178.824"/>
 	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="306.847" y1="161.586" x2="316.812" y2="157.959"/>
 	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="298.559" y1="143.674" x2="307.743" y2="138.372"/>
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="287.286" y1="127.474" x2="295.41" y2="120.657"/>
+		
 	
-		<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="273.371" y1="113.477" x2="280.187" y2="105.353"/>
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="257.236" y1="102.108" x2="262.539" y2="92.924"/>
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="239.373" y1="93.715" x2="243" y2="83.75"/>
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="220.324" y1="88.55" x2="222.165" y2="78.107"/>
-	<line fill="none" stroke="#FFFFFF" stroke-width="2" stroke-miterlimit="10" x1="200.667" y1="86.772" x2="200.667" y2="76.168"/>
-</g>
-</svg>
+	
+	
+	
+</defs><sodipodi:namedview
+   inkscape:current-layer="Layer_2"
+   inkscape:window-maximized="0"
+   inkscape:window-y="0"
+   inkscape:window-x="0"
+   inkscape:cy="207.18826"
+   inkscape:cx="200.3335"
+   inkscape:zoom="1.6234774"
+   inkscape:guide-bbox="true"
+   showguides="true"
+   showgrid="false"
+   id="namedview1012"
+   inkscape:window-height="1080"
+   inkscape:window-width="1920"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   inkscape:document-rotation="0"
+   bordercolor="#666666"
+   pagecolor="#ffffff"><sodipodi:guide
+     id="guide2421"
+     orientation="1,0"
+     position="361.64983,134.05554" /><sodipodi:guide
+     id="guide2423"
+     orientation="1,0"
+     position="39.516371,173.57191" /></sodipodi:namedview>
+
+
+<g
+   id="g4346"><circle
+     fill="#232323"
+     cx="200.33299"
+     cy="200"
+     r="161"
+     id="circle833" /><g
+     id="g4199"><text
+       y="203.83299"
+       x="289.6499"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text835">990</text><text
+       style="stroke-width:0.999984"
+       y="166.02119"
+       x="321.32785"
+       transform="rotate(9.9973587)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text837">985</text><text
+       y="123.26028"
+       x="345.9686"
+       transform="rotate(19.998771)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text839">980</text><text
+       style="stroke-width:0.999984"
+       y="235.57053"
+       x="251.88803"
+       transform="rotate(-9.9973587)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text841">995</text><text
+       y="260.28479"
+       x="203.60831"
+       transform="rotate(-19.998771)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text843">1000</text><text
+       style="stroke-width:0.999978"
+       y="277.20776"
+       x="157.24513"
+       transform="rotate(-30.000728)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text845">1005</text><text
+       style="stroke-width:0.999974"
+       y="285.81879"
+       x="108.65041"
+       transform="rotate(-40.002181)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text847">1010</text><text
+       style="stroke-width:0.999974"
+       y="285.85321"
+       x="59.32814"
+       transform="rotate(-49.997819)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text849">1015</text><text
+       style="stroke-width:0.999978"
+       y="277.32938"
+       x="10.719099"
+       transform="rotate(-59.999272)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text851">1020</text><text
+       y="260.4903"
+       x="-35.671711"
+       transform="rotate(-70.001229)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text853">1025</text><text
+       style="stroke-width:0.999984"
+       y="235.85129"
+       x="-78.430573"
+       transform="rotate(-80.002641)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text855">1030</text><text
+       y="204.168"
+       x="-116.24509"
+       transform="rotate(-89.999998)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text857">1035</text><g
+       id="g861">
+		
+			<line
+   fill="none"
+   stroke="#FFFFFF"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="313.56201"
+   y1="200.33299"
+   x2="324.16699"
+   y2="200.33299"
+   id="line859" />
+	</g><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="315.80301"
+       y1="196.3"
+       x2="321.80301"
+       y2="196.091"
+       id="line863" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="315.604"
+       y1="192.27299"
+       x2="321.59201"
+       y2="191.854"
+       id="line865" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="315.26401"
+       y1="188.255"
+       x2="321.23401"
+       y2="187.62801"
+       id="line867" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="314.784"
+       y1="184.25101"
+       x2="320.729"
+       y2="183.41701"
+       id="line869" /><g
+       id="g873">
+		
+			<line
+   fill="none"
+   stroke="#FFFFFF"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="311.784"
+   y1="219.989"
+   x2="322.22699"
+   y2="221.83"
+   id="line871" />
+	</g><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="314.69101"
+       y1="216.407"
+       x2="320.63599"
+       y2="217.243"
+       id="line875" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="315.194"
+       y1="212.40601"
+       x2="321.16501"
+       y2="213.034"
+       id="line877" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="315.55701"
+       y1="208.39101"
+       x2="321.54501"
+       y2="208.81"
+       id="line879" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="315.78"
+       y1="204.364"
+       x2="321.78"
+       y2="204.57401"
+       id="line881" /><g
+       id="g885">
+		
+			<line
+   fill="none"
+   stroke="#FFFFFF"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="306.61899"
+   y1="239.03799"
+   x2="316.58401"
+   y2="242.66499"
+   id="line883" />
+	</g><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="310.104"
+       y1="236.01601"
+       x2="315.814"
+       y2="237.871"
+       id="line887" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="311.293"
+       y1="232.162"
+       x2="317.065"
+       y2="233.81799"
+       id="line889" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="312.349"
+       y1="228.271"
+       x2="318.173"
+       y2="229.724"
+       id="line891" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="313.26801"
+       y1="224.345"
+       x2="319.14001"
+       y2="225.59399"
+       id="line893" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="302.18201"
+       y1="254.52901"
+       x2="307.483"
+       y2="257.349"
+       id="line895" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="304.022"
+       y1="250.94099"
+       x2="309.418"
+       y2="253.57401"
+       id="line897" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="305.737"
+       y1="247.293"
+       x2="311.22101"
+       y2="249.73399"
+       id="line899" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="307.32501"
+       y1="243.586"
+       x2="312.89001"
+       y2="245.83501"
+       id="line901" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="314.16501"
+       y1="180.267"
+       x2="320.078"
+       y2="179.22501"
+       id="line903" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="313.40701"
+       y1="176.30701"
+       x2="319.28"
+       y2="175.05901"
+       id="line905" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="312.51001"
+       y1="172.375"
+       x2="318.33701"
+       y2="170.923"
+       id="line907" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="311.478"
+       y1="168.478"
+       x2="317.25"
+       y2="166.823"
+       id="line909" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="310.311"
+       y1="164.619"
+       x2="316.022"
+       y2="162.76401"
+       id="line911" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="309.009"
+       y1="160.802"
+       x2="314.65201"
+       y2="158.75"
+       id="line913" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="307.57501"
+       y1="157.034"
+       x2="313.14301"
+       y2="154.786"
+       id="line915" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="306.01001"
+       y1="153.317"
+       x2="311.49701"
+       y2="150.87601"
+       id="line917" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="304.31699"
+       y1="149.658"
+       x2="309.715"
+       y2="147.02699"
+       id="line919" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="302.49701"
+       y1="146.06"
+       x2="307.79999"
+       y2="143.242"
+       id="line921" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="300.552"
+       y1="142.528"
+       x2="305.754"
+       y2="139.526"
+       id="line923" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="298.48599"
+       y1="139.065"
+       x2="303.57999"
+       y2="135.88499"
+       id="line925" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="296.29901"
+       y1="135.677"
+       x2="301.27899"
+       y2="132.321"
+       id="line927" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="293.996"
+       y1="132.368"
+       x2="298.85501"
+       y2="128.839"
+       id="line929" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="291.57901"
+       y1="129.14101"
+       x2="296.31201"
+       y2="125.445"
+       id="line931" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="289.04999"
+       y1="126"
+       x2="293.65201"
+       y2="122.141"
+       id="line933" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="286.414"
+       y1="122.949"
+       x2="290.87799"
+       y2="118.932"
+       id="line935" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="283.672"
+       y1="119.992"
+       x2="287.99399"
+       y2="115.821"
+       id="line937" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="280.82999"
+       y1="117.133"
+       x2="285.00201"
+       y2="112.813"
+       id="line939" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="277.88901"
+       y1="114.375"
+       x2="281.90799"
+       y2="109.912"
+       id="line941" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="274.854"
+       y1="111.72"
+       x2="278.71399"
+       y2="107.121"
+       id="line943" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="271.728"
+       y1="109.173"
+       x2="275.42499"
+       y2="104.442"
+       id="line945" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="268.51501"
+       y1="106.737"
+       x2="272.04401"
+       y2="101.88"
+       id="line947" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="265.21899"
+       y1="104.415"
+       x2="268.577"
+       y2="99.438004"
+       id="line949" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="261.84399"
+       y1="102.209"
+       x2="265.026"
+       y2="97.117996"
+       id="line951" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="258.39401"
+       y1="100.123"
+       x2="261.396"
+       y2="94.922997"
+       id="line953" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="254.873"
+       y1="98.157997"
+       x2="257.69199"
+       y2="92.856003"
+       id="line955" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="251.286"
+       y1="96.316002"
+       x2="253.91701"
+       y2="90.919998"
+       id="line957" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="247.636"
+       y1="94.601997"
+       x2="250.078"
+       y2="89.116997"
+       id="line959" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="243.929"
+       y1="93.015999"
+       x2="246.17799"
+       y2="87.448997"
+       id="line961" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="240.16901"
+       y1="91.559998"
+       x2="242.222"
+       y2="85.917999"
+       id="line963" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="236.36099"
+       y1="90.236"
+       x2="238.215"
+       y2="84.526001"
+       id="line965" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="232.508"
+       y1="89.044998"
+       x2="234.16299"
+       y2="83.275002"
+       id="line967" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="228.617"
+       y1="87.990997"
+       x2="230.069"
+       y2="82.166"
+       id="line969" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="224.69099"
+       y1="87.071999"
+       x2="225.939"
+       y2="81.199997"
+       id="line971" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="220.735"
+       y1="86.291"
+       x2="221.778"
+       y2="80.378998"
+       id="line973" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="216.754"
+       y1="85.648003"
+       x2="217.59"
+       y2="79.704002"
+       id="line975" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="212.75301"
+       y1="85.146004"
+       x2="213.381"
+       y2="79.175003"
+       id="line977" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="208.73801"
+       y1="84.782997"
+       x2="209.157"
+       y2="78.793999"
+       id="line979" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="204.711"
+       y1="84.559998"
+       x2="204.92101"
+       y2="78.560997"
+       id="line981" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="196.64799"
+       y1="84.533997"
+       x2="196.439"
+       y2="78.535004"
+       id="line983" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="192.621"
+       y1="84.734001"
+       x2="192.203"
+       y2="78.746002"
+       id="line985" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="188.603"
+       y1="85.073997"
+       x2="187.976"
+       y2="79.102997"
+       id="line987" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="184.599"
+       y1="85.554001"
+       x2="183.76401"
+       y2="79.609001"
+       id="line989" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="311.89999"
+       y1="180.666"
+       x2="322.34299"
+       y2="178.82401"
+       id="line991" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="306.84698"
+       y1="161.586"
+       x2="316.81201"
+       y2="157.959"
+       id="line993" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="298.55899"
+       y1="143.674"
+       x2="307.74301"
+       y2="138.37199"
+       id="line995" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="287.28601"
+       y1="127.474"
+       x2="295.41"
+       y2="120.657"
+       id="line997" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="273.371"
+       y1="113.477"
+       x2="280.18701"
+       y2="105.353"
+       id="line999" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="257.23599"
+       y1="102.108"
+       x2="262.539"
+       y2="92.924004"
+       id="line1001" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="239.373"
+       y1="93.714996"
+       x2="243"
+       y2="83.75"
+       id="line1003" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="220.32401"
+       y1="88.550003"
+       x2="222.16499"
+       y2="78.107002"
+       id="line1005" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-width="2"
+       stroke-miterlimit="10"
+       x1="200.66701"
+       y1="86.772003"
+       x2="200.66701"
+       y2="76.167999"
+       id="line1007" /><text
+       style="stroke-width:0.999978"
+       y="167.44601"
+       x="-146.21112"
+       id="text845-6"
+       font-size="11"
+       font-family="sans-serif"
+       fill="#FFFFFF"
+       transform="rotate(-99.447221)">1040</text><text
+       style="stroke-width:0.999974"
+       y="125.02289"
+       x="-171.13164"
+       id="text847-4"
+       font-size="11"
+       font-family="sans-serif"
+       fill="#FFFFFF"
+       transform="rotate(-109.44867)">1045</text><line
+       id="line923-7"
+       y2="80.050621"
+       x2="179.5251"
+       y1="85.975433"
+       x1="180.50967"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line925-3"
+       y2="80.807953"
+       x2="175.3526"
+       y1="86.69413"
+       x1="176.54178"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line927-7"
+       y2="81.711227"
+       x2="171.20764"
+       y1="87.552437"
+       x1="172.60164"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line929-5"
+       y2="82.758438"
+       x2="167.09628"
+       y1="88.547112"
+       x1="168.69472"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line931-0"
+       y2="83.94799"
+       x2="163.02551"
+       y1="89.677315"
+       x1="164.82458"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line933-2"
+       y2="85.278694"
+       x2="158.99794"
+       y1="90.942596"
+       x1="160.99562"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line935-1"
+       y2="86.749504"
+       x2="155.0193"
+       y1="92.339638"
+       x1="157.21338"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line937-8"
+       y2="88.357712"
+       x2="151.09383"
+       y1="93.86895"
+       x1="153.48193"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line939-7"
+       y2="90.10318"
+       x2="147.22688"
+       y1="95.526306"
+       x1="149.80716"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line941-1"
+       y2="91.981766"
+       x2="143.42429"
+       y1="97.311798"
+       x1="146.1922"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line995-2"
+       y2="77.783066"
+       x2="179.14285"
+       y1="88.243912"
+       x1="180.88301"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line997-6"
+       y2="83.111603"
+       x2="158.22562"
+       y1="93.111786"
+       x1="161.7565"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       stroke="#FFFFFF"
+       fill="none" /><text
+       y="74.568306"
+       x="363.1322"
+       transform="rotate(30.334721)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text835-4-7">975</text><text
+       style="stroke-width:0.999984"
+       y="25.962557"
+       x="371.25369"
+       transform="rotate(40.33208)"
+       fill="#FFFFFF"
+       font-family="sans-serif"
+       font-size="11"
+       id="text837-0-1">970</text><g
+       transform="rotate(30.334721,201.68215,200.16735)"
+       id="g861-9-3"><line
+         fill="none"
+         stroke="#FFFFFF"
+         stroke-width="2"
+         stroke-miterlimit="10"
+         x1="313.56201"
+         y1="200.33299"
+         x2="324.16699"
+         y2="200.33299"
+         id="line859-3-4" /></g><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="291.01706"
+       y1="271.25885"
+       x2="295.72589"
+       y2="274.98291"
+       id="line875-5-6" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="293.47189"
+       y1="268.05966"
+       x2="298.30826"
+       y2="271.61734"
+       id="line877-6-4" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="295.81299"
+       y1="264.77771"
+       x2="300.76956"
+       y2="268.16357"
+       id="line879-5-7" /><line
+       fill="none"
+       stroke="#FFFFFF"
+       stroke-miterlimit="10"
+       x1="298.03931"
+       y1="261.41467"
+       x2="303.11176"
+       y2="264.62619"
+       id="line881-3-8" /><text
+       id="text835-4-7-0"
+       font-size="11"
+       font-family="sans-serif"
+       fill="#FFFFFF"
+       transform="rotate(60.379527)"
+       x="361.73621"
+       y="-72.119301">960</text><text
+       id="text837-0-1-6"
+       font-size="11"
+       font-family="sans-serif"
+       fill="#FFFFFF"
+       transform="rotate(70.376886)"
+       x="344.41354"
+       y="-118.25538"
+       style="stroke-width:0.999984">955</text><text
+       id="text839-4-9-0"
+       font-size="11"
+       font-family="sans-serif"
+       fill="#FFFFFF"
+       transform="rotate(80.378298)"
+       x="319.33246"
+       y="-160.70561">950</text><text
+       id="text841-6-3-3"
+       font-size="11"
+       font-family="sans-serif"
+       fill="#FFFFFF"
+       transform="rotate(50.382169)"
+       x="370.78589"
+       y="-23.677261"
+       style="stroke-width:0.999984">965</text><g
+       id="g861-9-3-3"
+       transform="rotate(60.379527,201.12105,199.92997)"><line
+         id="line859-3-4-5"
+         y2="200.33299"
+         x2="324.16699"
+         y1="200.33299"
+         x1="313.56201"
+         stroke-miterlimit="10"
+         stroke-width="2"
+         stroke="#FFFFFF"
+         fill="none" /></g><line
+       id="line863-7-0-0"
+       y2="302.94363"
+       x2="264.10571"
+       y1="297.83099"
+       x1="260.9585"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line865-5-7-2"
+       y2="300.66605"
+       x2="267.68472"
+       y1="295.66763"
+       x1="264.3609"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line867-7-5-3"
+       y2="298.26611"
+       x2="271.18149"
+       y1="293.38617"
+       x1="267.68573"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line869-2-7-2"
+       y2="295.74579"
+       x2="274.59259"
+       y1="290.9899"
+       x1="270.92926"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><g
+       id="g873-9-5-7"
+       transform="rotate(60.379527,201.12105,199.92997)"><line
+         id="line871-7-0-1"
+         y2="221.83"
+         x2="322.22699"
+         y1="219.989"
+         x1="311.784"
+         stroke-miterlimit="10"
+         stroke-width="2"
+         stroke="#FFFFFF"
+         fill="none" /></g><line
+       id="line875-5-6-0"
+       y2="312.38351"
+       x2="245.14108"
+       y1="306.80225"
+       x1="242.9295"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line877-6-4-0"
+       y2="310.76309"
+       x2="249.06151"
+       y1="305.26199"
+       x1="246.65625"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line879-5-7-9"
+       y2="309.00571"
+       x2="252.92133"
+       y1="303.59317"
+       x1="250.32597"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line881-3-8-7"
+       y2="307.11633"
+       x2="256.71991"
+       y1="301.79666"
+       x1="253.93694"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><g
+       id="g885-0-4-1"
+       transform="rotate(60.379527,201.12105,199.92997)"><line
+         id="line883-4-0-7"
+         y2="242.66499"
+         x2="316.58401"
+         y1="239.03799"
+         x1="306.61899"
+         stroke-miterlimit="10"
+         stroke-width="2"
+         stroke="#FFFFFF"
+         fill="none" /></g><line
+       id="line887-8-0-4"
+       y2="318.38712"
+       x2="224.82549"
+       y1="312.5065"
+       x1="223.61589"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line889-5-6-5"
+       y2="317.47144"
+       x2="228.96716"
+       y1="311.63525"
+       x1="227.55392"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line891-5-2-1"
+       y2="316.41116"
+       x2="233.07379"
+       y1="310.6301"
+       x1="231.45837"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line893-5-4-7"
+       y2="315.21051"
+       x2="237.14203"
+       y1="309.48859"
+       x1="235.32555"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line895-4-7-8"
+       y2="320.77188"
+       x2="203.7753"
+       y1="314.76984"
+       x1="203.60675"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line897-2-4-2"
+       y2="320.58823"
+       x2="208.01335"
+       y1="314.59601"
+       x1="207.6353"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line899-1-1-5"
+       y2="320.25763"
+       x2="212.24269"
+       y1="314.28381"
+       x1="211.65422"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line901-9-8-4"
+       y2="319.78149"
+       x2="216.45706"
+       y1="313.83212"
+       x1="215.66164"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line903-2-5-5"
+       y2="293.10797"
+       x2="277.91504"
+       y1="288.4827"
+       x1="274.08667"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line905-4-8-3"
+       y2="290.35519"
+       x2="281.14218"
+       y1="285.86652"
+       x1="277.15454"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line907-5-9-0"
+       y2="287.49118"
+       x2="284.27161"
+       y1="283.14331"
+       x1="280.12936"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line909-8-9-1"
+       y2="284.51981"
+       x2="287.29858"
+       y1="280.3201"
+       x1="283.00702"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line911-6-9-9"
+       y2="281.44614"
+       x2="290.22018"
+       y1="277.39828"
+       x1="285.78491"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line913-2-3-4"
+       y2="278.27121"
+       x2="293.0325"
+       y1="274.37988"
+       x1="288.45959"
+       stroke-miterlimit="10"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line991-6-3-5"
+       y2="294.87875"
+       x2="279.38312"
+       y1="286.71088"
+       x1="272.62033"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       stroke="#FFFFFF"
+       fill="none" /><line
+       id="line993-3-7-9"
+       y2="279.758"
+       x2="294.78772"
+       y1="272.88788"
+       x1="286.70947"
+       stroke-miterlimit="10"
+       stroke-width="2"
+       stroke="#FFFFFF"
+       fill="none" /></g></g><text
+   style="fill:black;fill-opacity:1;line-height:1.25;stroke:none;font-family:sans-serif;font-style:normal;font-weight:normal;font-size:40px;shape-inside:url(#rect3694);white-space:pre;"
+   id="text3692"
+   xml:space="preserve" /></svg>
