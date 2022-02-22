@@ -18,7 +18,7 @@
     <script src="js/jquery-3.6.0.min"></script>
     <script src="js/jquery.flightindicators.min.js"></script>
     <script type="text/javascript">
-        function calculate_pressure_altitude(pressure, p0 = 101325) {
+        function calculate_altitude(pressure, p0 = 101325) {
             return 0.3048 * 145366.45 * (1 - Math.pow(pressure / p0, 0.190284))
         }
 
@@ -27,9 +27,10 @@
         }
 
         var old_p_utc = undefined;
-        var old_altitude = undefined;
+        var old_pressure = undefined;
         var vario = 0;
         var filter_coefficient = 16;
+        var qnh = 101300;
         var size = Math.min(window.innerHeight, window.innerWidth) / 2.05;
         var attitude = $.flightIndicator('#attitude', 'attitude', {
             size: size,
@@ -46,9 +47,25 @@
         });
         var altimeter = $.flightIndicator('#altimeter', 'altimeter', {
             size: size,
+            pressure: qnh / 100,
             showBox: false
         });
-        altimeter.setPressure(1013);
+        const altimeterSpan = document.getElementById("altimeter");
+
+        function adjustQnh(event) {
+            event.preventDefault();
+            qnh = Math.max(Math.min(104900, qnh + event.deltaY), 94600);
+            altimeter.setPressure(qnh / 100);
+        }
+        altimeterSpan.onwheel = adjustQnh;
+
+        window.onresize = function() {
+            let size = Math.min(window.innerHeight, window.innerWidth) / 2.05;
+            attitude.resize(size);
+            heading.resize(size);
+            variometer.resize(size);
+            altimeter.resize(size);
+        };
 
         var ws_imu = new WebSocket("ws://" + window.location.host + "/ws/imu");
         ws_imu.onmessage = function(event) {
@@ -61,24 +78,20 @@
         var ws_baro = new WebSocket("ws://" + window.location.host + "/ws/barometer");
         ws_baro.onmessage = function(event) {
             let message = JSON.parse(event.data);
-            let altitude = calculate_pressure_altitude(message.pressure);
+            let pressure = message.pressure;
+            let altitude = calculate_altitude(pressure, qnh);
             altimeter.setAltitude(altitude);
             if (old_p_utc != undefined) {
-                let new_vario = (altitude - old_altitude) / (message.p_utc - old_p_utc);
+                let new_vario = (
+                        calculate_altitude(pressure) -
+                        calculate_altitude(old_pressure)) /
+                    (message.p_utc - old_p_utc);
                 vario = iir_filter(vario, new_vario, filter_coefficient);
                 variometer.setVario(vario);
             }
             old_p_utc = message.p_utc;
-            old_altitude = altitude;
+            old_pressure = pressure;
         }
-
-        window.onresize = function() {
-            let size = Math.min(window.innerHeight, window.innerWidth) / 2.05;
-            attitude.resize(size);
-            heading.resize(size);
-            variometer.resize(size);
-            altimeter.resize(size);
-        };
     </script>
 </body>
 
