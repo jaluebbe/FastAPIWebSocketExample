@@ -1,4 +1,5 @@
-The code in FastAPIWebSocketExample/backend/static/flight-indicators is licensed
+The code in FastAPIWebSocketExample/backend/static/flight-indicators and
+FastAPIWebSocketExample/backend/static/skyhawk-flight-instruments is licensed
 under GPLv3 only. For all other code in this repository, either MIT or GPLv3
 may be chosen.
 
