@@ -40,7 +40,7 @@
         var size = Math.min(window.innerHeight, window.innerWidth) / 2.05;
         var attitude = $.flightIndicator('#attitude', 'attitude', {
             size: size,
-            off_flag: false,
+            off_flag: true,
             showBox: false
         });
         var heading = $.flightIndicator('#heading', 'heading', {
@@ -75,6 +75,9 @@
         };
 
         var ws_imu = new WebSocket("ws://" + window.location.host + "/ws/imu");
+        ws_imu.onopen = function() {
+            attitude.setOffFlag(false);
+        }
         ws_imu.onerror = function() {
             attitude.setOffFlag(true);
         }
