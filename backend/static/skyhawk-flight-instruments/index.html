@@ -11,16 +11,17 @@
         <div>
             <span id="attitude"></span>
             <span id="heading"></span>
+            <span id="turncoordinator"></span>
         </div>
         <div>
             <span id="altimeter"></span>
             <span id="variometer"></span>
+            <span id="airspeed"></span>
         </div>
     </div>
     <script src="../jquery-3.6.0.min.js"></script>
-    <script src="../d3.min.js"></script>
+    <script src="js/d3.min.js"></script>
     <script src="js/jquery.flightindicators.js"></script>
-
     <script type="text/javascript">
         function calculate_altitude(pressure, p0 = 101325) {
             return 0.3048 * 145366.45 * (1 - Math.pow(pressure / p0, 0.190284))
@@ -37,7 +38,7 @@
         const varioScaling = 1 / 0.3048 * 60 / 100;
         var filter_coefficient = 16;
         var qnh = 101300;
-        var size = Math.min(window.innerHeight, window.innerWidth) / 2.05;
+        var size = Math.min(window.innerHeight / 2.05, window.innerWidth / 3.15);
         var attitude = $.flightIndicator('#attitude', 'attitude', {
             size: size,
             off_flag: true,
@@ -47,12 +48,20 @@
             size: size,
             showBox: false
         });
+        var turn_coordinator = $.flightIndicator('#turncoordinator', 'turn_coordinator', {
+            size: size,
+            showBox: false
+        });
         var variometer = $.flightIndicator('#variometer', 'variometer', {
             vario: 0,
             size: size,
             showBox: false
         });
         var altimeter = $.flightIndicator('#altimeter', 'altimeter', {
+            size: size,
+            showBox: false
+        });
+        var airspeed = $.flightIndicator('#airspeed', 'airspeed', {
             size: size,
             showBox: false
         });
@@ -67,11 +76,13 @@
         altimeterSpan.onwheel = adjustQnh;
 
         window.onresize = function() {
-            let size = Math.min(window.innerHeight, window.innerWidth) / 2.05;
+            let size = Math.min(window.innerHeight / 2.05, window.innerWidth / 3.15);
             attitude.resize(size);
             heading.resize(size);
+            turn_coordinator.resize(size);
             variometer.resize(size);
             altimeter.resize(size);
+            airspeed.resize(size);
         };
 
         var ws_imu = new WebSocket("ws://" + window.location.host + "/ws/imu");
