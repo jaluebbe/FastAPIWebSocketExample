@@ -5,7 +5,7 @@ import numpy as np
 
 
 class FakeImu:
-    def __init__(self, i2c_address=0x1D, config_path=None):
+    def __init__(self):
         self.hostname = socket.gethostname()
 
     def get_sensor_data(self):

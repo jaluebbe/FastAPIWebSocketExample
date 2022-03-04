@@ -24,3 +24,12 @@ docker compose up
 If you don't want to use docker, you may use the Dockerfiles as guide how to
 start the fake data generator and the backend. Additionally, a running instance
 of Redis is required.
+You could use miniforge to create your environment by calling:
+```
+conda env create -f environment.yml
+```
+If you want to start the web interface on your local computer only, just call
+```
+uvicorn main:app --port 8080
+```
+from the backend folder.

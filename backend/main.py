@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException, WebSocket, status
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 import aioredis
-import websockets
+import websockets.exceptions
 import json
 import os
 import asyncio
@@ -18,9 +18,9 @@ app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-async def _get_channel_data(channels):
+async def _get_channel_data(channel):
     pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
-    await pubsub.subscribe(channels)
+    await pubsub.subscribe(channel)
     while True:
         message = await pubsub.get_message()
         if message is not None:
@@ -38,9 +38,9 @@ async def root():
 
 @app.get("/api/current_orientation")
 async def get_current_orientation():
-    channels = ["imu"]
+    channel = "imu"
     try:
-        imu_data = await asyncio.wait_for(_get_channel_data(channels), 0.2)
+        imu_data = await asyncio.wait_for(_get_channel_data(channel), 0.2)
     except asyncio.TimeoutError:
         logging.exception("/api/current_orientation")
         raise HTTPException(status_code=404, detail="no data available")
@@ -49,9 +49,9 @@ async def get_current_orientation():
 
 @app.get("/api/current_pressure")
 async def get_current_pressure():
-    channels = ["barometer"]
+    channels = "barometer"
     try:
-        baro_data = await asyncio.wait_for(_get_channel_data(channels), 0.2)
+        baro_data = await asyncio.wait_for(_get_channel_data(channel), 0.2)
     except asyncio.TimeoutError:
         logging.exception("/api/current_pressure")
         raise HTTPException(status_code=404, detail="no data available")
@@ -66,7 +66,7 @@ async def websocket_endpoint(websocket: WebSocket, channel: str):
         await websocket.close(code=status.WS_1003_UNSUPPORTED_DATA)
         return
     pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
-    await pubsub.subscribe([channel])
+    await pubsub.subscribe(channel)
     while True:
         try:
             message = await pubsub.get_message()
