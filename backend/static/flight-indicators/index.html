@@ -32,12 +32,14 @@
 
         var old_p_utc = undefined;
         var old_pressure = undefined;
+        var old_i_utc = undefined;
+        var old_yaw = undefined;
         var vario = 0;
+        var turn = 0;
         // from m/s to 1000 ft/min
         const varioScaling = 1 / 0.3048 * 60 / 1000;
         // 20 equals 3 deg/s or a full rotation in 2 minutes
         const turnScaling = 20 / 3;
-        var filter_coefficient = 16;
         var qnh = 101300;
         var size = Math.min(window.innerHeight / 2.05, window.innerWidth / 3.15);
         var attitude = $.flightIndicator('#attitude', 'attitude', {
@@ -91,6 +93,14 @@
             attitude.setRoll(message.roll);
             attitude.setPitch(message.pitch);
             heading.setHeading(message.yaw);
+            if (old_i_utc != undefined) {
+                let delta_t = message.i_utc - old_i_utc;
+                let yaw_rate = (message.yaw - old_yaw) / delta_t;
+                turn = iir_filter(turn, yaw_rate, 20);
+                turn_coordinator.setTurn(turn * turnScaling)
+            }
+            old_i_utc = message.i_utc;
+            old_yaw = message.yaw;
         }
 
         var ws_baro = new WebSocket("ws://" + window.location.host + "/ws/barometer");
@@ -104,7 +114,7 @@
                         calculate_altitude(pressure) -
                         calculate_altitude(old_pressure)) /
                     (message.p_utc - old_p_utc);
-                vario = iir_filter(vario, new_vario, filter_coefficient);
+                vario = iir_filter(vario, new_vario, 16);
                 variometer.setVario(vario * varioScaling);
             }
             old_p_utc = message.p_utc;
