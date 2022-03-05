@@ -3,9 +3,7 @@ dependencies:
   - nodejs
   - numpy
   - redis-py
-  - pip
-  - pip:
-    - aioredis==2
-    - fastapi
-    - uvicorn
-    - websockets
+  - aioredis=2
+  - websockets
+  - fastapi
+  - uvicorn
