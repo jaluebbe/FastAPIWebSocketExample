@@ -101,6 +101,7 @@
             attitude.setRoll(message.roll);
             attitude.setPitch(message.pitch);
             heading.setHeading(message.yaw);
+            turn_coordinator.setSlip(0.5 + message.roll_acc / 18);
             if (old_i_utc != undefined) {
                 let delta_t = message.i_utc - old_i_utc;
                 let yaw_rate = (message.yaw - old_yaw) / delta_t;
