@@ -17,6 +17,7 @@ class FakeBarometer:
         )
         temperature = 15 + 10 * np.cos(timestamp / 2e3)
         sensor_data = {
+            "sensor": "fake_barometer",
             "hostname": self.hostname,
             "p_utc": round(timestamp, 3),
             "pressure": round(pressure, 1),
