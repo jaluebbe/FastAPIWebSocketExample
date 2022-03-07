@@ -49,7 +49,7 @@ async def get_current_orientation():
 
 @app.get("/api/current_pressure")
 async def get_current_pressure():
-    channels = "barometer"
+    channel = "barometer"
     try:
         baro_data = await asyncio.wait_for(_get_channel_data(channel), 0.2)
     except asyncio.TimeoutError:
