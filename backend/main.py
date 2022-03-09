@@ -1,6 +1,6 @@
 from fastapi import FastAPI, HTTPException, WebSocket, status
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import RedirectResponse
 import aioredis
 import websockets.exceptions
 import json
@@ -33,7 +33,13 @@ async def _get_channel_data(channel):
 
 @app.get("/", include_in_schema=False)
 async def root():
-    return FileResponse("index.html")
+    return RedirectResponse("/static/index.html")
+
+
+@app.get("/api/websocket_connections")
+async def get_websocket_connections():
+    websocket_connections = await redis_connection.get("ws_connections")
+    return websocket_connections
 
 
 @app.get("/api/current_orientation")
@@ -60,13 +66,15 @@ async def get_current_pressure():
 
 @app.websocket("/ws/{channel}")
 async def websocket_endpoint(websocket: WebSocket, channel: str):
-    supported_channels = ["imu", "barometer"]
+    supported_channels = ["imu", "barometer", "ws_connections"]
     await websocket.accept()
     if channel not in supported_channels:
         await websocket.close(code=status.WS_1003_UNSUPPORTED_DATA)
         return
     pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
     await pubsub.subscribe(channel)
+    ws_connections = await redis_connection.incr("ws_connections")
+    await redis_connection.publish("ws_connections", ws_connections)
     while True:
         try:
             message = await pubsub.get_message()
@@ -76,8 +84,12 @@ async def websocket_endpoint(websocket: WebSocket, channel: str):
         except asyncio.TimeoutError:
             pass
         except websockets.exceptions.ConnectionClosedError:
+            ws_connections = await redis_connection.decr("ws_connections")
+            await redis_connection.publish("ws_connections", ws_connections)
             logging.exception("abnormal closure of websocket connection.")
             break
         except websockets.exceptions.ConnectionClosedOK:
+            ws_connections = await redis_connection.decr("ws_connections")
+            await redis_connection.publish("ws_connections", ws_connections)
             # normal closure with close code 1000
             break

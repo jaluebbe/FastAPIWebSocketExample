@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>IMU data visualisation examples</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <h2>IMU data visualisation examples</h2>
+    <p><b><a href="plotly.html" target="_blank">plotly</a></b></p>
+    <p><b><a href="threejs.html" target="_blank">three.js</a></b></p>
+    <h2>Barometer data visualisation example</h2>
+    <p><b><a href="barometer.html" target="_blank">plotly</a></b></p>
+    <h2>Flight instrument examples</h2>
+    <p><b><a href="flight-indicators/index.html" target="_blank">Flight Indicators</a></b></p>
+    <p><b><a href="skyhawk-flight-instruments/index.html" target="_blank">Skyhawk Flight Instruments</a></b></p>
+    <h2>Server information</h2>
+    <p><b><span id="wsConnectionsOnServer"></span> active connections</b></p>
+    <script>
+        const wsConnectionsLabel = document.getElementById("wsConnectionsOnServer");
+        var ws = new WebSocket("ws://" + window.location.host + "/ws/ws_connections");
+        ws.onmessage = function(event) {
+            let message = JSON.parse(event.data);
+            wsConnectionsLabel.innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>
