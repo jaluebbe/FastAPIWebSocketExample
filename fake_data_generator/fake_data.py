@@ -14,9 +14,11 @@ if __name__ == "__main__":
     else:
         redis_host = "127.0.0.1"
     redis_connection = redis.Redis(host=redis_host)
+    interval = 0.04
     imu = FakeImu()
     barometer = FakeBarometer()
     while True:
+        t_start = time.time()
         sensor_data = imu.get_sensor_data()
         sensor_data["channel"] = "imu"
         redis_connection.publish(
@@ -27,4 +29,5 @@ if __name__ == "__main__":
         redis_connection.publish(
             sensor_data["channel"], json.dumps(sensor_data)
         )
-        time.sleep(0.04)
+        dt = time.time() - t_start
+        time.sleep(max(0, interval - dt))
