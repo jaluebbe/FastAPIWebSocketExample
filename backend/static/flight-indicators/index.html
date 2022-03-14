@@ -98,6 +98,7 @@
                 let yaw_rate = (message.yaw - old_yaw) / delta_t;
                 turn = iir_filter(turn, yaw_rate, 20);
                 turn_coordinator.setTurn(turn * turnScaling)
+                turn_coordinator.setTurn(Math.min(Math.max(turn * turnScaling, -60), 60));
             }
             old_i_utc = message.i_utc;
             old_yaw = message.yaw;

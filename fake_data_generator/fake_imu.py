@@ -22,5 +22,7 @@ class FakeImu:
             "roll_acc": round(roll, 1),
             "pitch": round(pitch, 1),
             "yaw": round(yaw, 1),
+            # should represent yaw estimate by gyro.
+            "yaw_gyr": round(yaw, 1),
         }
         return sensor_data
