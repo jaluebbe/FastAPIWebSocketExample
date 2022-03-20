@@ -19,15 +19,11 @@ if __name__ == "__main__":
     barometer = FakeBarometer()
     while True:
         t_start = time.time()
-        sensor_data = imu.get_sensor_data()
-        sensor_data["channel"] = "imu"
-        redis_connection.publish(
-            sensor_data["channel"], json.dumps(sensor_data)
-        )
-        sensor_data = barometer.get_sensor_data()
-        sensor_data["channel"] = "barometer"
-        redis_connection.publish(
-            sensor_data["channel"], json.dumps(sensor_data)
-        )
+        imu_data = imu.get_sensor_data()
+        redis_connection.publish("imu", json.dumps(imu_data))
+        barometer_data = barometer.get_sensor_data()
+        redis_connection.publish("barometer", json.dumps(barometer_data))
+        imu_data.update(barometer_data)
+        redis_connection.publish("imu_pressure", json.dumps(imu_data))
         dt = time.time() - t_start
         time.sleep(max(0, interval - dt))
