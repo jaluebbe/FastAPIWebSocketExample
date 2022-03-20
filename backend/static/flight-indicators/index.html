@@ -87,26 +87,21 @@
             airspeed.resize(size);
         };
 
-        var ws_imu = new WebSocket("ws://" + window.location.host + "/ws/imu");
-        ws_imu.onmessage = function(event) {
+        var ws = new WebSocket("ws://" + window.location.host + "/ws/imu_pressure");
+        ws.onmessage = function(event) {
             let message = JSON.parse(event.data);
             attitude.setRoll(message.roll);
             attitude.setPitch(message.pitch);
             heading.setHeading(message.yaw);
             if (old_i_utc != undefined) {
                 let delta_t = message.i_utc - old_i_utc;
-                let yaw_rate = (message.yaw - old_yaw) / delta_t;
+                let yaw_rate = (message.yaw_gyr - old_yaw) / delta_t;
                 turn = iir_filter(turn, yaw_rate, 20);
                 turn_coordinator.setTurn(turn * turnScaling)
                 turn_coordinator.setTurn(Math.min(Math.max(turn * turnScaling, -60), 60));
             }
             old_i_utc = message.i_utc;
             old_yaw = message.yaw;
-        }
-
-        var ws_baro = new WebSocket("ws://" + window.location.host + "/ws/barometer");
-        ws_baro.onmessage = function(event) {
-            let message = JSON.parse(event.data);
             let pressure = message.pressure;
             let altitude = calculate_altitude(pressure, qnh);
             altimeter.setAltitude(altitude / 0.3048);
