@@ -16,11 +16,17 @@ npx webpack
 ```
 and install webpack on request.
 
-
-## Using docker compose to start all processes
+## Run examples
+There are several ways to run these examples.
+### Using examples as extension to GPSTracker
+If there is a running instance of https://github.com/jaluebbe/GPSTracker 
+on your Raspberry Pi, just copy the content of backend/static to the static 
+folder on your Raspberry Pi.
+### Using docker compose to start all processes
 ```
 docker compose up
 ```
+### Usage without docker
 If you don't want to use docker, you may use the Dockerfiles as guide how to
 start the fake data generator and the backend. Additionally, a running instance
 of Redis is required.
