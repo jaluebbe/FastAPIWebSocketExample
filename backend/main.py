@@ -1,8 +1,7 @@
 from fastapi import FastAPI, HTTPException, WebSocket, status
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
-import aioredis
-import websockets.exceptions
+from redis import asyncio as aioredis
 import json
 import os
 import asyncio
@@ -64,6 +63,46 @@ async def get_current_pressure():
     return baro_data
 
 
+async def redis_connector(
+    websocket: WebSocket, source_channel: str, target_channel: str
+):
+    async def consumer_handler(
+        redis_connection: aioredis.client.Redis,
+        websocket: WebSocket,
+        target_channel: str,
+    ):
+        async for message in websocket.iter_text():
+            await redis_connection.publish(target_channel, message)
+
+    async def producer_handler(
+        pubsub: aioredis.client.PubSub,
+        websocket: WebSocket,
+        source_channel: str,
+    ):
+        await pubsub.subscribe(source_channel)
+        async for message in pubsub.listen():
+            await websocket.send_text(message["data"])
+
+    redis_connection = aioredis.Redis(host=redis_host, decode_responses=True)
+    pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
+    ws_connections = await redis_connection.incr("ws_connections")
+    await redis_connection.publish("ws_connections", ws_connections)
+    consumer_task = consumer_handler(
+        redis_connection, websocket, target_channel
+    )
+    producer_task = producer_handler(pubsub, websocket, source_channel)
+    done, pending = await asyncio.wait(
+        [consumer_task, producer_task], return_when=asyncio.FIRST_COMPLETED
+    )
+    logging.debug(f"Done task: {done}")
+    for task in pending:
+        logging.debug(f"Cancelling task: {task}")
+        task.cancel()
+    ws_connections = await redis_connection.decr("ws_connections")
+    await redis_connection.publish("ws_connections", ws_connections)
+    await redis_connection.close()
+
+
 @app.websocket("/ws/{channel}")
 async def websocket_endpoint(websocket: WebSocket, channel: str):
     supported_channels = ["imu", "barometer", "ws_connections", "imu_pressure"]
@@ -71,25 +110,6 @@ async def websocket_endpoint(websocket: WebSocket, channel: str):
     if channel not in supported_channels:
         await websocket.close(code=status.WS_1003_UNSUPPORTED_DATA)
         return
-    pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
-    await pubsub.subscribe(channel)
-    ws_connections = await redis_connection.incr("ws_connections")
-    await redis_connection.publish("ws_connections", ws_connections)
-    while True:
-        try:
-            message = await pubsub.get_message()
-            if message is not None:
-                await websocket.send_text(message["data"])
-            await asyncio.sleep(0.01)
-        except asyncio.TimeoutError:
-            pass
-        except websockets.exceptions.ConnectionClosedError:
-            ws_connections = await redis_connection.decr("ws_connections")
-            await redis_connection.publish("ws_connections", ws_connections)
-            logging.exception("abnormal closure of websocket connection.")
-            break
-        except websockets.exceptions.ConnectionClosedOK:
-            ws_connections = await redis_connection.decr("ws_connections")
-            await redis_connection.publish("ws_connections", ws_connections)
-            # normal closure with close code 1000
-            break
+    await redis_connector(
+        websocket, source_channel=channel, target_channel="client_feedback"
+    )
