@@ -87,10 +87,12 @@ async def redis_connector(
     pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
     ws_connections = await redis_connection.incr("ws_connections")
     await redis_connection.publish("ws_connections", ws_connections)
-    consumer_task = consumer_handler(
-        redis_connection, websocket, target_channel
+    consumer_task = asyncio.create_task(
+        consumer_handler(redis_connection, websocket, target_channel)
     )
-    producer_task = producer_handler(pubsub, websocket, source_channel)
+    producer_task = asyncio.create_task(
+        producer_handler(pubsub, websocket, source_channel)
+    )
     done, pending = await asyncio.wait(
         [consumer_task, producer_task], return_when=asyncio.FIRST_COMPLETED
     )
