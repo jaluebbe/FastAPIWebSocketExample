@@ -9,14 +9,14 @@
 <body>
     <div class="instruments">
         <div>
+            <span id="airspeed"></span>
             <span id="attitude"></span>
-            <span id="heading"></span>
-            <span id="turncoordinator"></span>
+            <span id="altimeter"></span>
         </div>
         <div>
-            <span id="altimeter"></span>
+            <span id="turncoordinator"></span>
+            <span id="heading"></span>
             <span id="variometer"></span>
-            <span id="airspeed"></span>
         </div>
     </div>
     <script src="../jquery-3.6.0.min.js"></script>
@@ -33,14 +33,9 @@
 
         var old_p_utc = undefined;
         var old_pressure = undefined;
-        var old_i_utc = undefined;
-        var old_yaw = undefined;
         var vario = 0;
-        var turn = 0;
         // from m/s to 100 ft/min
         const varioScaling = 1 / 0.3048 * 60 / 100;
-        // 20 equals 3 deg/s or a full rotation in 2 minutes
-        const turnScaling = 20 / 3;
         var qnh = 101300;
         var size = Math.min(window.innerHeight / 2.05, window.innerWidth / 3.15);
         var attitude = $.flightIndicator('#attitude', 'attitude', {
@@ -101,17 +96,6 @@
             attitude.setRoll(message.roll);
             attitude.setPitch(message.pitch);
             heading.setHeading(message.yaw);
-            turn_coordinator.setSlip(0.5 + message.roll_acc / 18);
-            if (old_i_utc != undefined) {
-                let delta_t = message.i_utc - old_i_utc;
-                let yaw_rate = (message.yaw_gyr - old_yaw) / delta_t;
-                turn = iir_filter(turn, yaw_rate, 8);
-                turn_coordinator.setTurn(Math.min(Math.max(turn * turnScaling, -60), 60));
-            }
-            old_i_utc = message.i_utc;
-            old_yaw = message.yaw;
-            let pressure = message.pressure;
-            let altitude = calculate_altitude(pressure, qnh);
             altimeter.setAltitude(altitude / 0.3048);
             if (old_p_utc != undefined) {
                 let new_vario = (
