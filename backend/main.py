@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, WebSocket, status
+from fastapi import FastAPI, HTTPException, Query, WebSocket, status
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 from redis import asyncio as aioredis
@@ -13,21 +13,27 @@ else:
     redis_host = "127.0.0.1"
 redis_connection = aioredis.Redis(host=redis_host, decode_responses=True)
 
+SUPPORTED_CHANNELS = {"imu", "barometer", "ws_connections", "imu_pressure"}
+
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 async def _get_channel_data(channel):
-    pubsub = redis_connection.pubsub(ignore_subscribe_messages=True)
+    redis_conn = aioredis.Redis(host=redis_host, decode_responses=True)
+    pubsub = redis_conn.pubsub(ignore_subscribe_messages=True)
     await pubsub.subscribe(channel)
-    while True:
-        message = await pubsub.get_message()
-        if message is not None:
-            _channel = message["channel"]
-            _data = json.loads(message["data"])
-            _data["channel"] = _channel
-            return _data
-        await asyncio.sleep(0.01)
+    try:
+        while True:
+            message = await pubsub.get_message()
+            if message is not None:
+                _channel = message["channel"]
+                _data = json.loads(message["data"])
+                _data["channel"] = _channel
+                return _data
+            await asyncio.sleep(0.01)
+    finally:
+        await redis_conn.aclose()
 
 
 @app.get("/", include_in_schema=False)
@@ -102,14 +108,44 @@ async def redis_connector(
         task.cancel()
     ws_connections = await redis_connection.decr("ws_connections")
     await redis_connection.publish("ws_connections", ws_connections)
-    await redis_connection.close()
+    await redis_connection.aclose()
+
+
+async def _stream_channels(websocket: WebSocket, *channels: str):
+    await websocket.accept()
+    redis_conn = aioredis.Redis(host=redis_host, decode_responses=True)
+    pubsub = redis_conn.pubsub(ignore_subscribe_messages=True)
+    await pubsub.subscribe(*channels)
+    try:
+        while True:
+            message = await pubsub.get_message()
+            if message is not None:
+                await websocket.send_text(message["data"])
+            await asyncio.sleep(0.01)
+    except Exception:
+        pass
+    finally:
+        await redis_conn.aclose()
+
+
+@app.websocket("/ws/messages")
+async def websocket_multi_channel(
+    websocket: WebSocket,
+    channels: str = Query(...),
+):
+    channel_list = [c.strip() for c in channels.split(",")]
+    unsupported = [c for c in channel_list if c not in SUPPORTED_CHANNELS]
+    if unsupported:
+        await websocket.accept()
+        await websocket.close(code=status.WS_1003_UNSUPPORTED_DATA)
+        return
+    await _stream_channels(websocket, *channel_list)
 
 
 @app.websocket("/ws/{channel}")
 async def websocket_endpoint(websocket: WebSocket, channel: str):
-    supported_channels = ["imu", "barometer", "ws_connections", "imu_pressure"]
     await websocket.accept()
-    if channel not in supported_channels:
+    if channel not in SUPPORTED_CHANNELS:
         await websocket.close(code=status.WS_1003_UNSUPPORTED_DATA)
         return
     await redis_connector(
